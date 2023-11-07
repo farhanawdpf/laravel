@@ -27,4 +27,37 @@ class ProductController extends Controller
  
         return view('product', ['products' => $products]);
     }
+
+    public function create() {
+        return view('add-product');
+    }
+
+    public function addProduct(Request $request)
+    {
+        $products = DB::table('product')
+        ->insert(
+            [
+                'name' => $request->name,
+                'contact_id' => $request->contact_id,
+                'details' => $request->details,
+            ]
+        );
+        if($products) { 
+            return redirect()->route('product'); 
+        }
+    }
+
+    public function singleProduct($id) { 
+        $products = DB::table('product')->where('id',$id)->get();
+        return view('product',['products' => $products]);
+    }
+
+    public function deleteProduct($id) { 
+        $products = DB::table('product')->where('id',$id)->delete();
+        if($products) { 
+            return redirect()->route('product'); 
+        }
+    }
+
+
 }

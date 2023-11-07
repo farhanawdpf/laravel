@@ -7,17 +7,25 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
+<div class="text-center">
+        <h1>Hello, Crud!</h1>
+        <p>This is a simple CRUD application.</p>
+        <br>
+        <a href="{{ route('addProduct') }}">
+          <button class="btn btn-md btn-success"> Create</button>
+        </a>
 
+
+      </div>
 <div class="container">
         <table class="table table-striped">
             <thead>
               <tr>
               <th>Id</th>
                 <th>Product Name</th>
-                <th>Contact Name</th>
                 <th>contact</th>
                 <th>details</th>
-                <th>Date & Time</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -26,18 +34,20 @@
               <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
                 <td>{{ $product->name }}</td>
-                <td>{{ $product->contactName }} </td>
-                <td>{{ $product->phone }}</td>
+                <td>{{ $product->contact_id }}</td>
                 <td>{{ $product->details }}</td>
-                <td>{{ $product->created_at }}</td>
-
-                <!-- <td>
-                    
-                        <button class="btn btn-md btn-success me-1 p-1">edit</button>
-                    
-                      <button class="btn btn-md btn-danger  p-1">delete</button>
+                <td>
+                    <a href="{{route('singleProduct',$product->id )}}">
+                        <button class="btn btn-md btn-success me-1 p-1">view</button>
+                      </a>
+                      <a href="{{route('singleProduct',$product->id )}}">
+                        <button class="btn btn-md btn-success me-1 p-1">Edit</button>
+                      </a>
+                      <a href="{{route('deleteProduct',$product->id )}}">
+                        <button class="btn btn-md btn-danger me-1 p-1">Delete</button>
+                      </a>
                
-                </td> -->
+                </td>
               </tr>
 
               @endforeach
