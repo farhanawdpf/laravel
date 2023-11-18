@@ -17,7 +17,7 @@ class CountryController extends Controller
     public function index()
     {
         $countries = country::all();
-        dd($countries->toArray());
+        // dd($countries->toArray());
         return view('index',compact('countries')); 
     }
 
@@ -86,4 +86,17 @@ class CountryController extends Controller
     {
         //
     }
+
+    public function searchProduct (Request $request) { 
+        $countries = country::all()::where('name', 'like', '%'.$request->search_string.'%')
+       //  ->orWhere('detais', 'like', '%'.$request->search_string.'%')
+        ->orderBy('id','desc');
+        if($countries->count() >=1) {
+           return view ('index',compact('countries'));
+           } else { 
+               return response()->json([
+                   'status'=>'nathing_found',
+               ]);
+           }
+       }
 }
