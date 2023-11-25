@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2023 at 08:25 AM
+-- Generation Time: Nov 25, 2023 at 08:16 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -84,7 +84,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (6, '2023_11_11_040357_create_student_details_table', 1),
 (7, '2023_11_12_031257_create_phones_table', 1),
 (8, '2023_11_12_053139_create_categories_table', 1),
-(9, '2023_11_12_053409_create_products_table', 1);
+(9, '2023_11_12_053409_create_products_table', 1),
+(10, '2023_11_25_064721_create_student_user_table', 2);
 
 -- --------------------------------------------------------
 
@@ -173,6 +174,14 @@ CREATE TABLE `students` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`id`, `name`, `email`, `phone`, `created_at`, `updated_at`) VALUES
+(1, 'Khaleda', 'khaleda@gmail.com', '0923242', '2023-11-12 03:17:39', '2023-11-12 05:41:41'),
+(2, 'Sheuly', 'sheuly@gmail.com', '908394839', '2023-11-14 06:51:06', '2023-11-13 06:51:06');
+
 -- --------------------------------------------------------
 
 --
@@ -192,6 +201,30 @@ CREATE TABLE `student_details` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `student_user`
+--
+
+CREATE TABLE `student_user` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `student_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `student_user`
+--
+
+INSERT INTO `student_user` (`id`, `user_id`, `student_id`, `created_at`, `updated_at`) VALUES
+(1, 1, 2, '2023-11-25 06:56:51', '2023-11-25 06:56:51'),
+(2, 2, 2, '2023-11-25 06:56:51', '2023-11-25 06:56:51'),
+(3, 2, 1, '2023-11-25 07:00:35', '2023-11-25 07:00:35'),
+(4, 1, 2, '2023-11-25 07:00:35', '2023-11-25 07:00:35');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -205,6 +238,14 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'user-1', 'bristy@gmail.com', '2023-11-25 06:52:59', '12345', '12345', '2023-11-25 06:52:59', '2023-11-25 06:52:59'),
+(2, 'user-2', 'shu@gmail.com', '2023-11-25 06:52:59', '12345', '12345', '2023-11-25 06:52:59', '2023-11-25 06:52:59');
 
 --
 -- Indexes for dumped tables
@@ -269,6 +310,12 @@ ALTER TABLE `student_details`
   ADD UNIQUE KEY `student_details_student_id_unique` (`student_id`);
 
 --
+-- Indexes for table `student_user`
+--
+ALTER TABLE `student_user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -295,7 +342,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -319,7 +366,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `student_details`
@@ -328,10 +375,16 @@ ALTER TABLE `student_details`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `student_user`
+--
+ALTER TABLE `student_user`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
