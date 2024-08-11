@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Teacher;
+use App\Http\Controllers\StudentsController;
 
 
 /*
@@ -15,7 +16,8 @@ use App\Http\Controllers\Teacher;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/home', function () {
+//     return view('welcome');
+// });
 Route::get('teacher',[Teacher::class, 'index'])->name('teacher');
+Route::get('/', [StudentsController::class, 'index']);
