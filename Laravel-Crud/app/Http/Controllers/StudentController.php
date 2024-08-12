@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\student;
-use App\Http\Requests\StorestudentRequest;
-use App\Http\Requests\UpdatestudentRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Redis;
@@ -19,7 +17,7 @@ class StudentController extends Controller
     public function index()
     {
         $students = student::all();
-        dd($students->toArray());
+        // dd($students->toArray());
         return view('index',compact('students'));
     }
 
@@ -39,12 +37,11 @@ class StudentController extends Controller
      * @param  \App\Http\Requests\StorestudentRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorestudentRequest $request)
+    public function store(Request $request)
     {
 
         student::create($request->only([
-            'firstname',
-            'lastname',
+            'name',
             'email',
         ]));
         // dd($request->all());
@@ -104,13 +101,12 @@ class StudentController extends Controller
         $student->delete();
         return Redirect::to('/');
     }
- 
 
-    public function editStore(StorestudentRequest $request)
+
+    public function editStore(Request $request)
     {
        $student = student::find($request->student_id);
-        $student->firstname = $request->firstname;
-        $student->lastname = $request->lastname;
+        $student->name = $request->name;
         $student->email = $request->email;
         $student->save();
         return Redirect::to('/');

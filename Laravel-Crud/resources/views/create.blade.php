@@ -21,23 +21,17 @@
         <form method="POST" action="{{ route('store') }}">
           @csrf
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">first Name</label>
-              <input type="text" name="firstname" class="form-control"  required>
-              
+              <label for="exampleInputEmail1" class="form-label">Name</label>
+              <input type="text" name="name" class="form-control"  required>
+
             </div>
 
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Last Name</label>
-                <input type="text" name="lastname" class="form-control" required >
-                
-              </div>
 
-              
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">E-mail</label>
                 <input type="email" name="email" class="form-control"  required>
               </div>
-          
+
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
       </div>

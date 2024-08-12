@@ -10,6 +10,10 @@
 <body>
 
 <div class="container">
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <a class="btn btn-success btn-sm" href="{{ route('create') }}"> <i class="fa fa-plus"></i> Create New Product</a>
+        </div>
+
         <table class="table table-striped">
             <thead>
               <tr>

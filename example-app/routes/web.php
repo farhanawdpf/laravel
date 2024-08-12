@@ -20,4 +20,16 @@ use App\Http\Controllers\StudentsController;
 //     return view('welcome');
 // });
 Route::get('teacher',[Teacher::class, 'index'])->name('teacher');
+// Route::get('/', [StudentsController::class, 'index']);
+// Route::post('store', [StudentsController::class, 'store'])->name('store');
+// Route::get('create', [StudentsController::class, 'create'])->name('create');
 Route::get('/', [StudentsController::class, 'index']);
+
+Route::get('create', [StudentsController::class, 'create'])->name('create');
+Route::post('store', [StudentsController::class, 'store'])->name('store');
+
+Route::get('edit/{student_id}', [StudentsController::class, 'update'])->name('edit');
+
+Route::post('edit-store', [StudentsController::class, 'editStore'])->name('editStore');
+
+Route::delete('delete', [StudentsController::class, 'destroy'])->name('delete');

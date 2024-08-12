@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\CountryController;
-use App\Models\student;
 use Illuminate\Support\Facades\Route;
 
 /*
