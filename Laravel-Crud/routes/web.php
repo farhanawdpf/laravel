@@ -25,5 +25,5 @@ Route::get('edit/{student_id}', [StudentController::class, 'update'])->name('edi
 Route::post('edit-store', [StudentController::class, 'editStore'])->name('editStore');
 
 Route::delete('delete', [StudentController::class, 'destroy'])->name('delete');
-Route::delete('country', [CountryController::class, 'index'])->name('country');
+// Route::delete('country', [CountryController::class, 'index'])->name('country');
 
