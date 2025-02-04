@@ -22,15 +22,14 @@
 
       </div>
 
-     
+
 
       <div class="container">
         <table class="table table-striped">
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
+                <th scope="col">Name</th>
                 <th scope="col">E-mail</th>
                 <th scope="col">Action</th>
               </tr>
@@ -38,11 +37,10 @@
             <tbody>
 
              @foreach ($students as $student )
-               
+
               <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
-                <td>{{ $student->firstname }}</td>
-                <td>{{ $student->lastname }}</td>
+                <td>{{ $student->name }}</td>
                 <td>{{ $student->email }} </td>
 
                 <td>
@@ -57,8 +55,8 @@
                         <input type="text" name="student_id" value="{{ $student->id }}" hidden>
                       <button class="btn btn-md btn-danger  p-1">delete</button>
                 </form>
-                
-                 
+
+
                     </div>
                 </td>
               </tr>
@@ -69,7 +67,7 @@
           </table>
       </div>
 
-    
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

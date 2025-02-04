@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\students;
+use App\Models\Student;
 use App\Http\Requests\StorestudentsRequest;
 use App\Http\Requests\UpdatestudentsRequest;
 
@@ -15,72 +15,62 @@ class StudentsController extends Controller
      */
     public function index()
     {
-        //
+        $students = Student::all();
+        // dd($students->toArray());
+        return view('index',compact('students'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('create');
     }
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param  \App\Http\Requests\StorestudentsRequest  $request
-     * @return \Illuminate\Http\Response
      */
     public function store(StorestudentsRequest $request)
     {
-        //
+        Student::create($request->validated());
+
+        return redirect()->route('index')
+                         ->with('success', 'Student created successfully.');
     }
 
     /**
      * Display the specified resource.
-     *
-     * @param  \App\Models\students  $students
-     * @return \Illuminate\Http\Response
      */
-    public function show(students $students)
+    public function show(Student $student)
     {
-        //
+        return view('show',compact('student'));
     }
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\students  $students
-     * @return \Illuminate\Http\Response
      */
-    public function edit(students $students)
+    public function edit(Student $student)
     {
-        //
+        return view('edit',compact('student'));
     }
 
     /**
      * Update the specified resource in storage.
-     *
-     * @param  \App\Http\Requests\UpdatestudentsRequest  $request
-     * @param  \App\Models\students  $students
-     * @return \Illuminate\Http\Response
      */
-    public function update(UpdatestudentsRequest $request, students $students)
+    public function update(UpdatestudentsRequest $request, Student $student)
     {
-        //
+        $student->update($request->validated());
+
+        return redirect()->route('index')
+                        ->with('success','student updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\students  $students
-     * @return \Illuminate\Http\Response
      */
-    public function destroy(students $students)
+    public function destroy(Student $student)
     {
-        //
+        $student->delete();
+
+        return redirect()->route('index')
+                        ->with('success','Student deleted successfully');
     }
+
 }

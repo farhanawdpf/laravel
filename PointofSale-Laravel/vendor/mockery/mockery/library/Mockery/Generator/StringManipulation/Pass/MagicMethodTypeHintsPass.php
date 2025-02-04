@@ -14,6 +14,10 @@ use Mockery\Generator\Method;
 use Mockery\Generator\MockConfiguration;
 use Mockery\Generator\Parameter;
 use Mockery\Generator\TargetClassInterface;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
 use function array_filter;
 use function array_merge;
 use function end;
@@ -52,6 +56,10 @@ class MagicMethodTypeHintsPass implements Pass
      * Apply implementation.
      *
      * @param string $code
+<<<<<<< HEAD
+=======
+     * @param MockConfiguration $config
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return string
      */
@@ -73,6 +81,11 @@ class MagicMethodTypeHintsPass implements Pass
      * Returns the magic methods within the
      * passed DefinedTargetClass.
      *
+<<<<<<< HEAD
+=======
+     * @param TargetClassInterface $class
+     *
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      * @return array
      */
     public function getMagicMethods(?TargetClassInterface $class = null)
@@ -98,6 +111,10 @@ class MagicMethodTypeHintsPass implements Pass
      * class to the passed code.
      *
      * @param int $code
+<<<<<<< HEAD
+=======
+     * @param Method $method
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return string
      */
@@ -131,6 +148,10 @@ class MagicMethodTypeHintsPass implements Pass
     /**
      * Gets the declaration code, as a string, for the passed method.
      *
+<<<<<<< HEAD
+=======
+     * @param Method $method
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      * @param array $namedParameters
      *
      * @return string
@@ -164,6 +185,10 @@ class MagicMethodTypeHintsPass implements Pass
      * described in the $code string.
      *
      * @param int $code
+<<<<<<< HEAD
+=======
+     * @param Method $method
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return array
      */
@@ -187,8 +212,14 @@ class MagicMethodTypeHintsPass implements Pass
      * Checks if the method is declared within code.
      *
      * @param int $code
+<<<<<<< HEAD
      *
      * @return bool
+=======
+     * @param Method $method
+     *
+     * @return boolean
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      */
     private function isMethodWithinCode($code, Method $method)
     {

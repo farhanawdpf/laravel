@@ -22,7 +22,11 @@ class Subset extends MatcherAbstract
 
     /**
      * @param array $expected Expected subset of data
+<<<<<<< HEAD
      * @param bool  $strict   Whether to run a strict or loose comparison
+=======
+     * @param bool $strict Whether to run a strict or loose comparison
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      */
     public function __construct(array $expected, $strict = true)
     {
@@ -41,6 +45,7 @@ class Subset extends MatcherAbstract
     }
 
     /**
+<<<<<<< HEAD
      * @param array $expected Expected subset of data
      *
      * @return Subset
@@ -51,6 +56,8 @@ class Subset extends MatcherAbstract
     }
 
     /**
+=======
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      * Check if the actual value matches the expected.
      *
      * @template TMixed
@@ -73,6 +80,7 @@ class Subset extends MatcherAbstract
     }
 
     /**
+<<<<<<< HEAD
      * @param array $expected Expected subset of data
      *
      * @return Subset
@@ -83,6 +91,8 @@ class Subset extends MatcherAbstract
     }
 
     /**
+=======
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      * Recursively format an array into the string representation for this matcher
      *
      * @return string
@@ -96,4 +106,27 @@ class Subset extends MatcherAbstract
 
         return '[' . implode(', ', $elements) . ']';
     }
+<<<<<<< HEAD
+=======
+
+    /**
+     * @param array $expected Expected subset of data
+     *
+     * @return Subset
+     */
+    public static function loose(array $expected)
+    {
+        return new static($expected, false);
+    }
+
+    /**
+     * @param array $expected Expected subset of data
+     *
+     * @return Subset
+     */
+    public static function strict(array $expected)
+    {
+        return new static($expected, true);
+    }
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
 }

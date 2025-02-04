@@ -11,7 +11,11 @@ this library aims to offer character encoding functions that do not leak
 information about what you are encoding/decoding via processor cache 
 misses. Further reading on [cache-timing attacks](http://blog.ircmaxell.com/2014/11/its-all-about-time.html).
 
+<<<<<<< HEAD
 Our fork offers the following enhancements:
+=======
+Our fork offers the following enchancements:
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
 
 * `mbstring.func_overload` resistance
 * Unit tests

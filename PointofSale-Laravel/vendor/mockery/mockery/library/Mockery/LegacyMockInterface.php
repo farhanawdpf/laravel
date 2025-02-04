@@ -10,7 +10,10 @@
 
 namespace Mockery;
 
+<<<<<<< HEAD
 use Closure;
+=======
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
 use Throwable;
 
 interface LegacyMockInterface
@@ -41,10 +44,14 @@ interface LegacyMockInterface
     /**
      * Find an expectation matching the given method and arguments
      *
+<<<<<<< HEAD
      * @template TMixed
      *
      * @param string        $method
      * @param array<TMixed> $args
+=======
+     * @param string $method
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return null|Expectation
      */
@@ -83,7 +90,11 @@ interface LegacyMockInterface
     /**
      * Fetch array of ordered groups
      *
+<<<<<<< HEAD
      * @return array<string,int>
+=======
+     * @return array<string, int>
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      */
     public function mockery_getGroups();
 
@@ -140,7 +151,11 @@ interface LegacyMockInterface
      * Set ordering for a group
      *
      * @param string $group
+<<<<<<< HEAD
      * @param int    $order
+=======
+     * @param int $order
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return void
      */
@@ -157,7 +172,11 @@ interface LegacyMockInterface
      * Validate the current mock's ordering
      *
      * @param string $method
+<<<<<<< HEAD
      * @param int    $order
+=======
+     * @param int $order
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @throws Exception
      *
@@ -177,8 +196,12 @@ interface LegacyMockInterface
     /**
      * Allows additional methods to be mocked that do not explicitly exist on mocked class
      *
+<<<<<<< HEAD
      * @param  string $method the method name to be mocked
      * @return self
+=======
+     * @param string $method name of the method to be mocked
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      */
     public function shouldAllowMockingMethod($method);
 
@@ -202,11 +225,18 @@ interface LegacyMockInterface
     public function shouldHaveBeenCalled();
 
     /**
+<<<<<<< HEAD
      * @template TMixed
      * @param string                     $method
      * @param null|array<TMixed>|Closure $args
      *
      * @return self
+=======
+     * @param string $method
+     * @param null|array|Closure $args
+     *
+     * @return mixed
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      */
     public function shouldHaveReceived($method, $args = null);
 
@@ -215,26 +245,43 @@ interface LegacyMockInterface
      *
      * @template TReturnValue
      *
+<<<<<<< HEAD
      * @param null|TReturnValue $returnValue the default return value for calls to missing functions on this mock
+=======
+     * @param TReturnValue $returnValue the default return value for calls to missing functions on this mock
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return self
      */
     public function shouldIgnoreMissing($returnValue = null);
 
     /**
+<<<<<<< HEAD
      * @template TMixed
      * @param null|array<TMixed> $args (optional)
      *
      * @return self
+=======
+     * @param null|array $args (optional)
+     *
+     * @return mixed
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      */
     public function shouldNotHaveBeenCalled(?array $args = null);
 
     /**
+<<<<<<< HEAD
      * @template TMixed
      * @param string                     $method
      * @param null|array<TMixed>|Closure $args
      *
      * @return self
+=======
+     * @param string $method
+     * @param null|array|Closure $args
+     *
+     * @return mixed
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      */
     public function shouldNotHaveReceived($method, $args = null);
 

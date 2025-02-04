@@ -11,7 +11,11 @@
 namespace Mockery\Generator\StringManipulation\Pass;
 
 use Mockery\Generator\MockConfiguration;
+<<<<<<< HEAD
 use Mockery\Generator\TargetClassInterface;
+=======
+
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
 use function preg_replace;
 
 /**
@@ -20,22 +24,33 @@ use function preg_replace;
  * mocked. This pass removes the builtin methods where they are final on the
  * target
  */
+<<<<<<< HEAD
 class RemoveBuiltinMethodsThatAreFinalPass implements Pass
+=======
+class RemoveBuiltinMethodsThatAreFinalPass
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
 {
     protected $methods = [
         '__wakeup' => '/public function __wakeup\(\)\s+\{.*?\}/sm',
         '__toString' => '/public function __toString\(\)\s+(:\s+string)?\s*\{.*?\}/sm',
     ];
 
+<<<<<<< HEAD
     /**
      * @param  string $code
      * @return string
      */
+=======
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function apply($code, MockConfiguration $config)
     {
         $target = $config->getTargetClass();
 
+<<<<<<< HEAD
         if (! $target instanceof TargetClassInterface) {
+=======
+        if (! $target) {
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
             return $code;
         }
 

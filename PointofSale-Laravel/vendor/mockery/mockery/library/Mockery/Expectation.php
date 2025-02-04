@@ -101,6 +101,16 @@ class Expectation implements ExpectationInterface
     protected $_expectedCount = -1;
 
     /**
+<<<<<<< HEAD
+=======
+     * Integer representing the call order of this expectation on a global basis
+     *
+     * @var int
+     */
+    protected $_globalOrderNumber = null;
+
+    /**
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      * Flag indicating whether the order of calling is determined locally or
      * globally
      *
@@ -109,6 +119,7 @@ class Expectation implements ExpectationInterface
     protected $_globally = false;
 
     /**
+<<<<<<< HEAD
      * Integer representing the call order of this expectation on a global basis
      *
      * @var int
@@ -116,6 +127,8 @@ class Expectation implements ExpectationInterface
     protected $_globalOrderNumber = null;
 
     /**
+=======
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      * Mock object to which this expectation belongs
      *
      * @var LegacyMockInterface
@@ -273,6 +286,7 @@ class Expectation implements ExpectationInterface
     }
 
     /**
+<<<<<<< HEAD
      * Set a return value, or sequential queue of return values
      *
      * @param mixed ...$args
@@ -285,6 +299,8 @@ class Expectation implements ExpectationInterface
     }
 
     /**
+=======
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      * Return this mock, like a fluent interface
      *
      * @return self
@@ -339,10 +355,29 @@ class Expectation implements ExpectationInterface
     }
 
     /**
+<<<<<<< HEAD
      * Register values to be set to a public property each time this expectation occurs
      *
      * @param string $name
      * @param array  ...$values
+=======
+     * Set a return value, or sequential queue of return values
+     *
+     * @param mixed ...$args
+     *
+     * @return self
+     */
+    public function andReturns(...$args)
+    {
+        return $this->andReturn(...$args);
+    }
+
+    /**
+     * Register values to be set to a public property each time this expectation occurs
+     *
+     * @param string $name
+     * @param array ...$values
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return self
      */
@@ -357,8 +392,13 @@ class Expectation implements ExpectationInterface
      * Set Exception class and arguments to that class to be thrown
      *
      * @param string|Throwable $exception
+<<<<<<< HEAD
      * @param string           $message
      * @param int              $code
+=======
+     * @param string $message
+     * @param int $code
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return self
      */
@@ -648,7 +688,11 @@ class Expectation implements ExpectationInterface
      * - set('foo', 'bar')->andReturn('bar')
      *
      * @param string $name
+<<<<<<< HEAD
      * @param mixed  $value
+=======
+     * @param mixed $value
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return self
      */

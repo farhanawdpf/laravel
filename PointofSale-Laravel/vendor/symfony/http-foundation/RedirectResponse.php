@@ -103,7 +103,10 @@ class RedirectResponse extends Response
 </html>', htmlspecialchars($url, \ENT_QUOTES, 'UTF-8')));
 
         $this->headers->set('Location', $url);
+<<<<<<< HEAD
         $this->headers->set('Content-Type', 'text/html; charset=utf-8');
+=======
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
 
         return $this;
     }

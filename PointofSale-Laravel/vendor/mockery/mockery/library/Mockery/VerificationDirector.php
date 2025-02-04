@@ -128,7 +128,11 @@ class VerificationDirector
 
     /**
      * @param string $method
+<<<<<<< HEAD
      * @param array  $args
+=======
+     * @param array $args
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return self
      */
@@ -147,7 +151,11 @@ class VerificationDirector
 
     /**
      * @param string $method
+<<<<<<< HEAD
      * @param array  $args
+=======
+     * @param array $args
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return self
      */

@@ -2,21 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-
+use App\Models\Student;
+use App\Http\Requests\StorestudentsRequest;
+use App\Http\Requests\UpdatestudentsRequest;
 class Teacher extends Controller
 {
-    public function index () { 
-        $teachers = DB::table('teacher')
-        ->leftjoin('class','class.id','teacher.class_id')
-        ->leftjoin('students','students.id','teacher.student_id')
-        ->select('teacher.*',
-            'class.name as className',
-            'students.name as studntname',
-            'students.email')
-        ->get();
-        // dd($teachers);
-        return view('teacher', ['teachers' => $teachers]);
+    public function index () {
+        $students = Student::all();
+        dd($students->toArray());
+        return view('index',compact('students'));
     }
 }

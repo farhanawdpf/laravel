@@ -26,6 +26,7 @@
 
             </div>
 
+<<<<<<< HEAD
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email</label>
                 <input type="text" name="email" class="form-control" required >
@@ -33,6 +34,9 @@
               </div>
 
 
+=======
+
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">E-mail</label>
                 <input type="email" name="email" class="form-control"  required>

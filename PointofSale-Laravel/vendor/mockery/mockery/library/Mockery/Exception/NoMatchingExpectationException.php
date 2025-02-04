@@ -15,6 +15,7 @@ use Mockery\LegacyMockInterface;
 
 class NoMatchingExpectationException extends Exception
 {
+<<<<<<< HEAD
     /**
      * @var array<mixed>
      */
@@ -33,27 +34,42 @@ class NoMatchingExpectationException extends Exception
     /**
      * @return array<mixed>
      */
+=======
+    protected $actual = [];
+
+    protected $method = null;
+
+    protected $mockObject = null;
+
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function getActualArguments()
     {
         return $this->actual;
     }
 
+<<<<<<< HEAD
     /**
      * @return string|null
      */
+=======
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function getMethodName()
     {
         return $this->method;
     }
 
+<<<<<<< HEAD
     /**
      * @return LegacyMockInterface|null
      */
+=======
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function getMock()
     {
         return $this->mockObject;
     }
 
+<<<<<<< HEAD
     /**
      * @return string|null
      */
@@ -75,25 +91,38 @@ class NoMatchingExpectationException extends Exception
      * @param  array<TMixed> $count
      * @return self
      */
+=======
+    public function getMockName()
+    {
+        return $this->getMock()->mockery_getName();
+    }
+
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function setActualArguments($count)
     {
         $this->actual = $count;
         return $this;
     }
 
+<<<<<<< HEAD
     /**
      * @param  string $name
      * @return self
      */
+=======
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function setMethodName($name)
     {
         $this->method = $name;
         return $this;
     }
 
+<<<<<<< HEAD
     /**
      * @return self
      */
+=======
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function setMock(LegacyMockInterface $mock)
     {
         $this->mockObject = $mock;

@@ -16,9 +16,12 @@ use ReflectionParameter;
 
 use function array_map;
 
+<<<<<<< HEAD
 /**
  * @mixin ReflectionMethod
  */
+=======
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
 class Method
 {
     /**
@@ -31,6 +34,7 @@ class Method
         $this->method = $method;
     }
 
+<<<<<<< HEAD
     /**
      * @template TArgs
      * @template TMixed
@@ -43,11 +47,19 @@ class Method
     public function __call($method, $args)
     {
         /** @var TMixed */
+=======
+    public function __call($method, $args)
+    {
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
         return $this->method->{$method}(...$args);
     }
 
     /**
+<<<<<<< HEAD
      * @return list<Parameter>
+=======
+     * @return Parameter[]
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      */
     public function getParameters()
     {

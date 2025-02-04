@@ -42,10 +42,15 @@ abstract class Hex implements EncoderInterface
      * @return string
      * @throws TypeError
      */
+<<<<<<< HEAD
     public static function encode(
         #[\SensitiveParameter]
         string $binString
     ): string {
+=======
+    public static function encode(string $binString): string
+    {
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
         $hex = '';
         $len = Binary::safeStrlen($binString);
         for ($i = 0; $i < $len; ++$i) {
@@ -71,10 +76,15 @@ abstract class Hex implements EncoderInterface
      * @return string
      * @throws TypeError
      */
+<<<<<<< HEAD
     public static function encodeUpper(
         #[\SensitiveParameter]
         string $binString
     ): string {
+=======
+    public static function encodeUpper(string $binString): string
+    {
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
         $hex = '';
         $len = Binary::safeStrlen($binString);
 
@@ -103,7 +113,10 @@ abstract class Hex implements EncoderInterface
      * @throws RangeException
      */
     public static function decode(
+<<<<<<< HEAD
         #[\SensitiveParameter]
+=======
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
         string $encodedString,
         bool $strictPadding = false
     ): string {

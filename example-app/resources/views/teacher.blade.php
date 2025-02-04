@@ -20,21 +20,19 @@
             </thead>
             <tbody>
 
-             @foreach ($teachers as $teacher )
-               
+             @foreach ($students as $teacher )
+
               <tr>
                 <th scope="row">{{ $loop->iteration }}</th>
                 <td>{{ $teacher->name }}</td>
                 <td>{{ $teacher->email }} </td>
-                <td>{{ $teacher->className }}</td>
-                <td>{{ $teacher->studntname }}</td>
 
                 <!-- <td>
-                    
+
                         <button class="btn btn-md btn-success me-1 p-1">edit</button>
-                    
+
                       <button class="btn btn-md btn-danger  p-1">delete</button>
-               
+
                 </td> -->
               </tr>
 
@@ -43,15 +41,15 @@
             </tbody>
           </table>
       </div>
-    <!-- <table border="1" width="800"> 
-    <tr> 
+    <!-- <table border="1" width="800">
+    <tr>
         <th>id</th>
         <th>name</th>
         <th>email</th>
         <th>class</th>
         <th>student name</th>
     </tr>
-    <tr> 
+    <tr>
         @if(!empty($teachers))
         @foreach($teachers as $teacher)
         <td>{{$teacher->id}}</td>

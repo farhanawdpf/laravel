@@ -8,6 +8,7 @@
  * @link https://github.com/mockery/mockery for the canonical source repository
  */
 
+<<<<<<< HEAD
 use Mockery\LegacyMockInterface;
 use Mockery\Matcher\AndAnyOtherArgs;
 use Mockery\Matcher\AnyArgs;
@@ -21,6 +22,12 @@ if (! \function_exists('mock')) {
      *
      * @return LegacyMockInterface&MockInterface&TMock
      */
+=======
+use Mockery\Matcher\AndAnyOtherArgs;
+use Mockery\Matcher\AnyArgs;
+
+if (! \function_exists('mock')) {
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     function mock(...$args)
     {
         return Mockery::mock(...$args);
@@ -28,6 +35,7 @@ if (! \function_exists('mock')) {
 }
 
 if (! \function_exists('spy')) {
+<<<<<<< HEAD
     /**
      * @template TSpy of object
      *
@@ -35,6 +43,8 @@ if (! \function_exists('spy')) {
      *
      * @return LegacyMockInterface&MockInterface&TSpy
      */
+=======
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     function spy(...$args)
     {
         return Mockery::spy(...$args);
@@ -42,6 +52,7 @@ if (! \function_exists('spy')) {
 }
 
 if (! \function_exists('namedMock')) {
+<<<<<<< HEAD
     /**
      * @template TNamedMock of object
      *
@@ -49,6 +60,8 @@ if (! \function_exists('namedMock')) {
      *
      * @return LegacyMockInterface&MockInterface&TNamedMock
      */
+=======
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     function namedMock(...$args)
     {
         return Mockery::namedMock(...$args);
@@ -56,21 +69,33 @@ if (! \function_exists('namedMock')) {
 }
 
 if (! \function_exists('anyArgs')) {
+<<<<<<< HEAD
     function anyArgs(): AnyArgs
+=======
+    function anyArgs()
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     {
         return new AnyArgs();
     }
 }
 
 if (! \function_exists('andAnyOtherArgs')) {
+<<<<<<< HEAD
     function andAnyOtherArgs(): AndAnyOtherArgs
+=======
+    function andAnyOtherArgs()
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     {
         return new AndAnyOtherArgs();
     }
 }
 
 if (! \function_exists('andAnyOthers')) {
+<<<<<<< HEAD
     function andAnyOthers(): AndAnyOtherArgs
+=======
+    function andAnyOthers()
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     {
         return new AndAnyOtherArgs();
     }

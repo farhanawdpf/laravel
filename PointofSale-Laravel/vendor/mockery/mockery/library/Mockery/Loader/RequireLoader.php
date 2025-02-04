@@ -37,6 +37,7 @@ class RequireLoader implements Loader
      */
     protected $path;
 
+<<<<<<< HEAD
     /**
      * @param string|null $path
      */
@@ -47,6 +48,11 @@ class RequireLoader implements Loader
         }
 
         $this->path = realpath($path);
+=======
+    public function __construct($path = null)
+    {
+        $this->path = realpath($path) ?: sys_get_temp_dir();
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     }
 
     public function __destruct()

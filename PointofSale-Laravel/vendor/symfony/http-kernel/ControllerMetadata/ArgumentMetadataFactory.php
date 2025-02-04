@@ -33,7 +33,11 @@ final class ArgumentMetadataFactory implements ArgumentMetadataFactoryInterface
             $class = $reflection->class;
         } else {
             $reflection = new \ReflectionFunction($controller);
+<<<<<<< HEAD
             if ($class = str_contains($reflection->name, '{closure') ? null : (\PHP_VERSION_ID >= 80111 ? $reflection->getClosureCalledClass() : $reflection->getClosureScopeClass())) {
+=======
+            if ($class = str_contains($reflection->name, '{closure}') ? null : (\PHP_VERSION_ID >= 80111 ? $reflection->getClosureCalledClass() : $reflection->getClosureScopeClass())) {
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
                 $class = $class->name;
             }
         }

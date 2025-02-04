@@ -136,11 +136,18 @@ final class BrickMathCalculator implements CalculatorInterface
 
     /**
      * Maps ramsey/uuid rounding modes to those used by brick/math
+<<<<<<< HEAD
      *
      * @return BrickMathRounding::*
      */
     private function getBrickRoundingMode(int $roundingMode)
     {
         return self::ROUNDING_MODE_MAP[$roundingMode] ?? BrickMathRounding::UNNECESSARY;
+=======
+     */
+    private function getBrickRoundingMode(int $roundingMode): int
+    {
+        return self::ROUNDING_MODE_MAP[$roundingMode] ?? 0;
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     }
 }

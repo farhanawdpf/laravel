@@ -42,7 +42,11 @@ class ReflectionCaster
 
         $a = static::castFunctionAbstract($c, $a, $stub, $isNested, $filter);
 
+<<<<<<< HEAD
         if (!str_contains($c->name, '{closure')) {
+=======
+        if (!str_contains($c->name, '{closure}')) {
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
             $stub->class = isset($a[$prefix.'class']) ? $a[$prefix.'class']->value.'::'.$c->name : $c->name;
             unset($a[$prefix.'class']);
         }

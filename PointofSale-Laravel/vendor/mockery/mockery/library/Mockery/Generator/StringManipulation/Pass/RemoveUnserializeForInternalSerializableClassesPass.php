@@ -11,8 +11,15 @@
 namespace Mockery\Generator\StringManipulation\Pass;
 
 use Mockery\Generator\MockConfiguration;
+<<<<<<< HEAD
 use function strrpos;
 use function substr;
+=======
+
+use function strrpos;
+use function substr;
+
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
 use const PHP_VERSION_ID;
 
 /**
@@ -21,16 +28,23 @@ use const PHP_VERSION_ID;
  * implements Serializable, we need to replace the standard unserialize method
  * definition with a dummy
  */
+<<<<<<< HEAD
 class RemoveUnserializeForInternalSerializableClassesPass implements Pass
+=======
+class RemoveUnserializeForInternalSerializableClassesPass
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
 {
     public const DUMMY_METHOD_DEFINITION = 'public function unserialize(string $data): void {} ';
 
     public const DUMMY_METHOD_DEFINITION_LEGACY = 'public function unserialize($string) {} ';
 
+<<<<<<< HEAD
     /**
      * @param  string $code
      * @return string
      */
+=======
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function apply($code, MockConfiguration $config)
     {
         $target = $config->getTargetClass();

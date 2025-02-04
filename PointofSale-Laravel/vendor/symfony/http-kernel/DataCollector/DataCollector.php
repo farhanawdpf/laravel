@@ -70,6 +70,7 @@ abstract class DataCollector implements DataCollectorInterface
         $casters = [
             '*' => function ($v, array $a, Stub $s, $isNested) {
                 if (!$v instanceof Stub) {
+<<<<<<< HEAD
                     $b = $a;
                     foreach ($a as $k => $v) {
                         if (!\is_object($v) || $v instanceof \DateTimeInterface || $v instanceof Stub) {
@@ -85,6 +86,11 @@ abstract class DataCollector implements DataCollectorInterface
                             }
                         } catch (\TypeError $e) {
                             // we've hit a typed reference
+=======
+                    foreach ($a as $k => $v) {
+                        if (\is_object($v) && !$v instanceof \DateTimeInterface && !$v instanceof Stub) {
+                            $a[$k] = new CutStub($v);
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
                         }
                     }
                 }

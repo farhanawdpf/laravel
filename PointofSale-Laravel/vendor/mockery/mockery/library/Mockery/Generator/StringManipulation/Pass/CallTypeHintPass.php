@@ -11,14 +11,21 @@
 namespace Mockery\Generator\StringManipulation\Pass;
 
 use Mockery\Generator\MockConfiguration;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
 use function str_replace;
 
 class CallTypeHintPass implements Pass
 {
+<<<<<<< HEAD
     /**
      * @param  string $code
      * @return string
      */
+=======
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function apply($code, MockConfiguration $config)
     {
         if ($config->requiresCallTypeHintRemoval()) {

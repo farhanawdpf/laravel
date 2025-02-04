@@ -474,7 +474,11 @@ class RequestDataCollector extends DataCollector implements EventSubscriberInter
                 'line' => $r->getStartLine(),
             ];
 
+<<<<<<< HEAD
             if (str_contains($r->name, '{closure')) {
+=======
+            if (str_contains($r->name, '{closure}')) {
+>>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
                 return $controller;
             }
             $controller['method'] = $r->name;
