@@ -1,0 +1,23 @@
+file name
+master.blade.php
+
+
+@include('layout.header')
+@include('layout.nav')
+@include('layout.sidebar')
+
+ @yield('content')
+
+@include('layout.footer')
+
+
+pages
+
+@extends('master')
+@section('content')
+....
+.......
+form/table[html code]
+......
+....
+@endsection
