@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\TypeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,3 +25,10 @@ Route::get('/add-user', function () {
 Route::get('/manage-user', function () {
     return view('pages.user.manage_users');
 });
+Route::get('/type', function () {
+    return view('pages.one-to-one.add_type');
+});
+Route::get('/manage-type', function () {
+    return view('pages.one-to-one.type_list');
+});
+Route::get('/manage-type',[TypeController::class, 'index'])->name('manage-type');
