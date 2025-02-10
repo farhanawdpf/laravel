@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TypeController;
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,3 +33,4 @@ Route::get('/manage-type', function () {
     return view('pages.one-to-one.type_list');
 });
 Route::get('/manage-type',[TypeController::class, 'index'])->name('manage-type');
+Route::get('/manage-post',[PostController::class, 'index'])->name('manage-post');
