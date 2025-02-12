@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TypeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\BusController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,3 +35,4 @@ Route::get('/manage-type', function () {
 });
 Route::get('/manage-type',[TypeController::class, 'index'])->name('manage-type');
 Route::get('/manage-post',[PostController::class, 'index'])->name('manage-post');
+Route::get('/manage-bus',[BusController::class, 'index'])->name('manage-bus');
