@@ -5,6 +5,7 @@ use App\Http\Controllers\TypeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\BusController;
 use App\Http\Controllers\MechanicController;
+use App\Http\Controllers\ProjectController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,3 +39,4 @@ Route::get('/manage-type',[TypeController::class, 'index'])->name('manage-type')
 Route::get('/manage-post',[PostController::class, 'index'])->name('manage-post');
 Route::get('/manage-bus',[BusController::class, 'index'])->name('manage-bus');
 Route::get('/manage-mechanic',[MechanicController::class, 'index'])->name('manage-mechanic');
+Route::get('/manage-project',[ProjectController::class, 'index'])->name('manage-project');

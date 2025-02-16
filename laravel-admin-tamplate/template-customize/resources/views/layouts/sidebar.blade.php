@@ -134,6 +134,24 @@
 
             </ul>
           </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+              Project
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/manage-project" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Manage-Project</p>
+                </a>
+              </li>
+
+            </ul>
+          </li>
           <li class="nav-header">EXAMPLES</li>
 
           <li class="nav-header">MISCELLANEOUS</li>
