@@ -140,6 +140,7 @@ class ComposerStaticInit6a65194e90853bfca7a60b5ce946a15b
             'Laravel\\Sail\\' => 13,
             'Laravel\\Jetstream\\' => 18,
             'Laravel\\Fortify\\' => 16,
+            'Laravel\\Breeze\\' => 15,
         ),
         'J' => 
         array (
@@ -371,8 +372,8 @@ class ComposerStaticInit6a65194e90853bfca7a60b5ce946a15b
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -469,6 +470,10 @@ class ComposerStaticInit6a65194e90853bfca7a60b5ce946a15b
         'Laravel\\Fortify\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/fortify/src',
+        ),
+        'Laravel\\Breeze\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel/breeze/src',
         ),
         'Jenssegers\\Agent\\' => 
         array (
@@ -3403,6 +3408,11 @@ class ComposerStaticInit6a65194e90853bfca7a60b5ce946a15b
         'Jenssegers\\Agent\\AgentServiceProvider' => __DIR__ . '/..' . '/jenssegers/agent/src/AgentServiceProvider.php',
         'Jenssegers\\Agent\\Facades\\Agent' => __DIR__ . '/..' . '/jenssegers/agent/src/Facades/Agent.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
+        'Laravel\\Breeze\\BreezeServiceProvider' => __DIR__ . '/..' . '/laravel/breeze/src/BreezeServiceProvider.php',
+        'Laravel\\Breeze\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallCommand.php',
+        'Laravel\\Breeze\\Console\\InstallsApiStack' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallsApiStack.php',
+        'Laravel\\Breeze\\Console\\InstallsBladeStack' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallsBladeStack.php',
+        'Laravel\\Breeze\\Console\\InstallsInertiaStacks' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallsInertiaStacks.php',
         'Laravel\\Fortify\\Actions\\AttemptToAuthenticate' => __DIR__ . '/..' . '/laravel/fortify/src/Actions/AttemptToAuthenticate.php',
         'Laravel\\Fortify\\Actions\\CanonicalizeUsername' => __DIR__ . '/..' . '/laravel/fortify/src/Actions/CanonicalizeUsername.php',
         'Laravel\\Fortify\\Actions\\CompletePasswordReset' => __DIR__ . '/..' . '/laravel/fortify/src/Actions/CompletePasswordReset.php',

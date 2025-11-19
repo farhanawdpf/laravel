@@ -29,11 +29,7 @@ class TestListenerTrait
      * endTest is called after each test and checks if \Mockery::close() has
      * been called, and will let the test fail if it hasn't.
      *
-<<<<<<< HEAD
      * @param Test  $test
-=======
-     * @param Test $test
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      * @param float $time
      */
     public function endTest(Test $test, $time)

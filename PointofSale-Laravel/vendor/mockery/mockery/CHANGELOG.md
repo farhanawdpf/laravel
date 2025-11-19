@@ -7,7 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-<<<<<<< HEAD
 ## [1.6.12] - 2024-05-15
 
 ### Changed
@@ -27,8 +26,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [1417: Bump `Jinja2` from `3.1.3` to `3.1.4` fix CVE-2024-34064](https://github.com/mockery/mockery/pull/1417)
 - [1412: Bump `idna` from `3.6` to `3.7` fix CVE-2024-3651](https://github.com/mockery/mockery/pull/1412)
 
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
 ## [1.6.11] - 2024-03-21
 
 ### Fixed

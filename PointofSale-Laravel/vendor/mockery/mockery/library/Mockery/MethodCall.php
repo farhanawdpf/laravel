@@ -24,11 +24,7 @@ class MethodCall
 
     /**
      * @param string $method
-<<<<<<< HEAD
      * @param array  $args
-=======
-     * @param array $args
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      */
     public function __construct($method, $args)
     {

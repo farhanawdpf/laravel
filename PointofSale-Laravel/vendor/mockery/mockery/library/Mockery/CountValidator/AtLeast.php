@@ -33,10 +33,7 @@ class AtLeast extends CountValidatorAbstract
      *
      * @param int $n
      *
-<<<<<<< HEAD
      * @throws InvalidCountException
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      * @return bool
      */
     public function validate($n)
@@ -49,10 +46,7 @@ class AtLeast extends CountValidatorAbstract
                 . ' at least ' . $this->_limit . ' times but called ' . $n
                 . ' times.'
             );
-<<<<<<< HEAD
 
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
             $exception->setMock($this->_expectation->getMock())
                 ->setMethodName((string) $this->_expectation)
                 ->setExpectedCountComparative('>=')

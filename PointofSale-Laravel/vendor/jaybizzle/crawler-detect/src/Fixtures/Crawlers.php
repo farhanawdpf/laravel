@@ -209,10 +209,6 @@ class Crawlers extends AbstractProvider
         'Branch Metrics API',
         'Branch-Passthrough',
         'Brandprotect',
-<<<<<<< HEAD
-=======
-        'BrandVerity',
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
         'Brandwatch',
         'Brodie\/',
         'Browsershots',
@@ -501,10 +497,7 @@ class Crawlers extends AbstractProvider
         'Google-Youtube-Links',
         'GoogleDocs',
         'GoogleHC\/',
-<<<<<<< HEAD
         'GoogleOther',
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
         'GoogleProber',
         'GoogleProducer',
         'GoogleSites',
@@ -1268,10 +1261,7 @@ class Crawlers extends AbstractProvider
         'VB Project',
         'vBSEO',
         'VCI',
-<<<<<<< HEAD
         'Verity',
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
         'via ggpht\.com GoogleImageProxy',
         'Virusdie',
         'visionutils',

@@ -13,7 +13,6 @@ namespace Mockery\Generator;
 use Mockery\Reflector;
 use ReflectionClass;
 use ReflectionParameter;
-<<<<<<< HEAD
 use function class_exists;
 
 /**
@@ -27,32 +26,15 @@ class Parameter
     private static $parameterCounter = 0;
 
     /**
-=======
-
-use function class_exists;
-
-class Parameter
-{
-    /**
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      * @var ReflectionParameter
      */
     private $rfp;
 
-<<<<<<< HEAD
-=======
-    /**
-     * @var int
-     */
-    private static $parameterCounter = 0;
-
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function __construct(ReflectionParameter $rfp)
     {
         $this->rfp = $rfp;
     }
 
-<<<<<<< HEAD
     /**
      * Proxy all method calls to the reflection parameter.
      *
@@ -67,10 +49,6 @@ class Parameter
     public function __call($method, array $args)
     {
         /** @var TResult */
-=======
-    public function __call($method, array $args)
-    {
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
         return $this->rfp->{$method}(...$args);
     }
 
@@ -100,10 +78,7 @@ class Parameter
     public function getName()
     {
         $name = $this->rfp->getName();
-<<<<<<< HEAD
 
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
         if (! $name || $name === '...') {
             return 'arg' . self::$parameterCounter++;
         }

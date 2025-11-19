@@ -17,7 +17,6 @@ use function in_array;
 
 class InvalidCountException extends Exception
 {
-<<<<<<< HEAD
     /**
      * @var int|null
      */
@@ -46,68 +45,43 @@ class InvalidCountException extends Exception
     /**
      * @return int|null
      */
-=======
-    protected $actual = null;
-
-    protected $expected = 0;
-
-    protected $expectedComparative = '<=';
-
-    protected $method = null;
-
-    protected $mockObject = null;
-
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function getActualCount()
     {
         return $this->actual;
     }
 
-<<<<<<< HEAD
     /**
      * @return int
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function getExpectedCount()
     {
         return $this->expected;
     }
 
-<<<<<<< HEAD
     /**
      * @return string
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function getExpectedCountComparative()
     {
         return $this->expectedComparative;
     }
 
-<<<<<<< HEAD
     /**
      * @return string|null
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function getMethodName()
     {
         return $this->method;
     }
 
-<<<<<<< HEAD
     /**
      * @return LegacyMockInterface|null
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function getMock()
     {
         return $this->mockObject;
     }
 
-<<<<<<< HEAD
     /**
      * @throws RuntimeException
      * @return string|null
@@ -127,39 +101,26 @@ class InvalidCountException extends Exception
      * @param  int  $count
      * @return self
      */
-=======
-    public function getMockName()
-    {
-        return $this->getMock()->mockery_getName();
-    }
-
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function setActualCount($count)
     {
         $this->actual = $count;
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @param  int  $count
      * @return self
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function setExpectedCount($count)
     {
         $this->expected = $count;
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @param  string $comp
      * @return self
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function setExpectedCountComparative($comp)
     {
         if (! in_array($comp, ['=', '>', '<', '>=', '<='], true)) {
@@ -170,25 +131,19 @@ class InvalidCountException extends Exception
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @param  string $name
      * @return self
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function setMethodName($name)
     {
         $this->method = $name;
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @return self
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function setMock(LegacyMockInterface $mock)
     {
         $this->mockObject = $mock;

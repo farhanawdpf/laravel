@@ -229,19 +229,11 @@ class Mockery
     /**
      * Static fetching of a mock associated with a name or explicit class poser.
      *
-<<<<<<< HEAD
      * @template TFetchMock of object
      *
      * @param class-string<TFetchMock> $name
      *
      * @return null|(LegacyMockInterface&MockInterface&TFetchMock)
-=======
-     * @template TMock of object
-     *
-     * @param class-string<TMock> $name
-     *
-     * @return LegacyMockInterface&MockInterface&TMock
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      */
     public static function fetchMock($name)
     {
@@ -474,15 +466,9 @@ class Mockery
     /**
      * Static shortcut to Container::mock().
      *
-<<<<<<< HEAD
      * @template TMock of object
      *
      * @param array<class-string<TMock>|TMock|Closure(LegacyMockInterface&MockInterface&TMock):LegacyMockInterface&MockInterface&TMock|array<TMock>> $args
-=======
-     * @template TMock
-     *
-     * @param array<class-string<TMock>|TMock|array<mixed>> $args
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return LegacyMockInterface&MockInterface&TMock
      */
@@ -575,11 +561,7 @@ class Mockery
      * @template TReturnArgs
      *
      * @param TReturnArgs ...$args
-<<<<<<< HEAD
      * @param Closure     $add
-=======
-     * @param Closure $add
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return CompositeExpectation
      */
@@ -686,21 +668,13 @@ class Mockery
      *
      * @template TSpy
      *
-<<<<<<< HEAD
      * @param array<class-string<TSpy>|TSpy|Closure(LegacyMockInterface&MockInterface&TSpy):LegacyMockInterface&MockInterface&TSpy|array<TSpy>> $args
-=======
-     * @param array<class-string<TSpy>|TSpy|array<mixed>> $args
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return LegacyMockInterface&MockInterface&TSpy
      */
     public static function spy(...$args)
     {
-<<<<<<< HEAD
         if ($args !== [] && $args[0] instanceof Closure) {
-=======
-        if (\count($args) && $args[0] instanceof Closure) {
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
             $args[0] = new ClosureWrapper($args[0]);
         }
 
@@ -737,11 +711,7 @@ class Mockery
      * Sets up expectations on the members of the CompositeExpectation and
      * builds up any demeter chain that was passed to shouldReceive.
      *
-<<<<<<< HEAD
      * @param string  $arg
-=======
-     * @param string $arg
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      * @param Closure $add
      *
      * @throws MockeryException
@@ -810,11 +780,7 @@ class Mockery
      * @template TArray or array
      *
      * @param TArray $argument
-<<<<<<< HEAD
      * @param int    $nesting
-=======
-     * @param int $nesting
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return TArray
      */
@@ -846,11 +812,7 @@ class Mockery
      * @template TArgument
      *
      * @param TArgument $argument
-<<<<<<< HEAD
      * @param int       $nesting
-=======
-     * @param int $nesting
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return mixed
      */
@@ -885,17 +847,10 @@ class Mockery
             $shortName = \trim(\array_pop($parts));
             $namespace = \implode('\\', $parts);
 
-<<<<<<< HEAD
             $targetCode .= "namespace {$namespace};\n";
         }
 
         $targetCode .= \sprintf('%s %s {} ', $type, $shortName);
-=======
-            $targetCode.= "namespace {$namespace};\n";
-        }
-
-        $targetCode.= \sprintf('%s %s {} ', $type, $shortName);
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
 
         /*
          * We could eval here, but it doesn't play well with the way
@@ -915,11 +870,7 @@ class Mockery
      * Returns all public instance properties.
      *
      * @param object $object
-<<<<<<< HEAD
      * @param int    $nesting
-=======
-     * @param int $nesting
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return array<string, mixed>
      */
@@ -948,11 +899,7 @@ class Mockery
      * of any passed argument.
      *
      * @param mixed $argument
-<<<<<<< HEAD
      * @param int   $depth
-=======
-     * @param int $depth
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return mixed
      */
@@ -1009,11 +956,7 @@ class Mockery
      *
      * @param class-string<TMock> $demeterMockKey
      *
-<<<<<<< HEAD
      * @return null|(LegacyMockInterface&MockInterface&TMock)
-=======
-     * @return LegacyMockInterface&MockInterface&TMock
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      */
     private static function getExistingDemeterMock(Container $container, $demeterMockKey)
     {
@@ -1089,11 +1032,7 @@ class Mockery
      * Utility function to turn public properties and public get* and is* method values into an array.
      *
      * @param object $object
-<<<<<<< HEAD
      * @param int    $nesting
-=======
-     * @param int $nesting
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      *
      * @return array
      */

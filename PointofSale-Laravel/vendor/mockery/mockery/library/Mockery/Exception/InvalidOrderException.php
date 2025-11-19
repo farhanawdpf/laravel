@@ -15,7 +15,6 @@ use Mockery\LegacyMockInterface;
 
 class InvalidOrderException extends Exception
 {
-<<<<<<< HEAD
     /**
      * @var int|null
      */
@@ -39,55 +38,35 @@ class InvalidOrderException extends Exception
     /**
      * @return int|null
      */
-=======
-    protected $actual = null;
-
-    protected $expected = 0;
-
-    protected $method = null;
-
-    protected $mockObject = null;
-
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function getActualOrder()
     {
         return $this->actual;
     }
 
-<<<<<<< HEAD
     /**
      * @return int
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function getExpectedOrder()
     {
         return $this->expected;
     }
 
-<<<<<<< HEAD
     /**
      * @return string|null
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function getMethodName()
     {
         return $this->method;
     }
 
-<<<<<<< HEAD
     /**
      * @return LegacyMockInterface|null
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function getMock()
     {
         return $this->mockObject;
     }
 
-<<<<<<< HEAD
     /**
      * @return string|null
      */
@@ -107,53 +86,37 @@ class InvalidOrderException extends Exception
      *
      * @return self
      */
-=======
-    public function getMockName()
-    {
-        return $this->getMock()->mockery_getName();
-    }
-
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function setActualOrder($count)
     {
         $this->actual = $count;
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @param int $count
      *
      * @return self
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function setExpectedOrder($count)
     {
         $this->expected = $count;
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @param string $name
      *
      * @return self
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function setMethodName($name)
     {
         $this->method = $name;
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @return self
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function setMock(LegacyMockInterface $mock)
     {
         $this->mockObject = $mock;

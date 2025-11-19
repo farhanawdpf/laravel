@@ -21,10 +21,7 @@ class Exact extends CountValidatorAbstract
      *
      * @param int $n
      *
-<<<<<<< HEAD
      * @throws InvalidCountException
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
      * @return bool
      */
     public function validate($n)

@@ -14,12 +14,9 @@ use function array_diff;
 
 class MockConfigurationBuilder
 {
-<<<<<<< HEAD
     /**
      * @var list<string>
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     protected $blackListedMethods = [
         '__call',
         '__callStatic',
@@ -48,7 +45,6 @@ class MockConfigurationBuilder
         'unset', 'use', 'var', 'while', 'xor',
     ];
 
-<<<<<<< HEAD
     /**
      * @var array
      */
@@ -77,18 +73,6 @@ class MockConfigurationBuilder
     /**
      * @var list<string>
      */
-=======
-    protected $constantsMap = [];
-
-    protected $instanceMock = false;
-
-    protected $mockOriginalDestructor = false;
-
-    protected $name;
-
-    protected $parameterOverrides = [];
-
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     protected $php7SemiReservedKeywords = [
         'callable', 'class', 'trait', 'extends', 'implements', 'static', 'abstract', 'final',
         'public', 'protected', 'private', 'const', 'enddeclare', 'endfor', 'endforeach', 'endif',
@@ -99,7 +83,6 @@ class MockConfigurationBuilder
         'declare', 'case', 'do', 'while', 'as', 'catch', 'die', 'self', 'parent',
     ];
 
-<<<<<<< HEAD
     /**
      * @var array
      */
@@ -108,10 +91,6 @@ class MockConfigurationBuilder
     /**
      * @var array
      */
-=======
-    protected $targets = [];
-
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     protected $whiteListedMethods = [];
 
     public function __construct()
@@ -119,26 +98,20 @@ class MockConfigurationBuilder
         $this->blackListedMethods = array_diff($this->blackListedMethods, $this->php7SemiReservedKeywords);
     }
 
-<<<<<<< HEAD
     /**
      * @param  string $blackListedMethod
      * @return self
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function addBlackListedMethod($blackListedMethod)
     {
         $this->blackListedMethods[] = $blackListedMethod;
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @param  list<string> $blackListedMethods
      * @return self
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function addBlackListedMethods(array $blackListedMethods)
     {
         foreach ($blackListedMethods as $method) {
@@ -148,13 +121,10 @@ class MockConfigurationBuilder
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @param  class-string $target
      * @return self
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function addTarget($target)
     {
         $this->targets[] = $target;
@@ -162,13 +132,10 @@ class MockConfigurationBuilder
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @param  list<class-string> $targets
      * @return self
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function addTargets($targets)
     {
         foreach ($targets as $target) {
@@ -178,24 +145,18 @@ class MockConfigurationBuilder
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @return self
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function addWhiteListedMethod($whiteListedMethod)
     {
         $this->whiteListedMethods[] = $whiteListedMethod;
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @return self
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function addWhiteListedMethods(array $whiteListedMethods)
     {
         foreach ($whiteListedMethods as $method) {
@@ -205,12 +166,9 @@ class MockConfigurationBuilder
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @return MockConfiguration
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function getMockConfiguration()
     {
         return new MockConfiguration(
@@ -225,20 +183,16 @@ class MockConfigurationBuilder
         );
     }
 
-<<<<<<< HEAD
     /**
      * @param  list<string> $blackListedMethods
      * @return self
      */
-=======
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function setBlackListedMethods(array $blackListedMethods)
     {
         $this->blackListedMethods = $blackListedMethods;
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @return self
      */
@@ -271,31 +225,12 @@ class MockConfigurationBuilder
     /**
      * @param string $name
      */
-=======
-    public function setConstantsMap(array $map)
-    {
-        $this->constantsMap = $map;
-    }
-
-    public function setInstanceMock($instanceMock)
-    {
-        $this->instanceMock = (bool) $instanceMock;
-    }
-
-    public function setMockOriginalDestructor($mockDestructor)
-    {
-        $this->mockOriginalDestructor = $mockDestructor;
-        return $this;
-    }
-
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function setName($name)
     {
         $this->name = $name;
         return $this;
     }
 
-<<<<<<< HEAD
     /**
      * @return self
      */
@@ -309,13 +244,6 @@ class MockConfigurationBuilder
      * @param  list<string> $whiteListedMethods
      * @return self
      */
-=======
-    public function setParameterOverrides(array $overrides)
-    {
-        $this->parameterOverrides = $overrides;
-    }
-
->>>>>>> 0de19938433b4a14eaf363950a309911fd65ab53
     public function setWhiteListedMethods(array $whiteListedMethods)
     {
         $this->whiteListedMethods = $whiteListedMethods;
